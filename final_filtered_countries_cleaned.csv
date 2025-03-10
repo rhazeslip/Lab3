@@ -104,9 +104,9 @@ Chile,2021,1.8,24.7,0.7
 China,2005,12.9,20.1,1.3
 China,2010,12.8,21.4,1.5
 China,2021,11.6,23.6,2
-"China, Hong Kong SAR",2005,4.8,,1
-"China, Hong Kong SAR",2010,3.3,,1
-"China, Hong Kong SAR",2021,1.9,,1
+"China, Hong Kong SAR",2005,4.8,0,1
+"China, Hong Kong SAR",2010,3.3,0,1
+"China, Hong Kong SAR",2021,1.9,0,1
 Colombia,2005,1.8,55.7,1.4
 Colombia,2010,1.6,54.8,1.4
 Colombia,2021,1.8,53.1,2.3
@@ -200,9 +200,9 @@ Ghana,2021,20.7,35.1,11.9
 Greece,2005,20.5,29.1,8.8
 Greece,2010,19.9,30.3,8.8
 Greece,2021,16.5,30.3,8.4
-Greenland,2005,,0,0
-Greenland,2010,,0,0
-Greenland,2021,,0,0
+Greenland,2005,0,0,0
+Greenland,2010,0,0,0
+Greenland,2021,0,0,0
 Grenada,2005,5.9,52.1,17.6
 Grenada,2010,8.8,52.1,17.6
 Grenada,2021,8.8,52.1,11.8
@@ -329,9 +329,9 @@ Mauritius,2021,37.6,19.4,2
 Mexico,2005,12,34.8,1.3
 Mexico,2010,11.8,34.4,1.4
 Mexico,2021,10.3,33.7,1.4
-Monaco,2005,,0,0
-Monaco,2010,,0,0
-Monaco,2021,,0,0
+Monaco,2005,0,0,0
+Monaco,2010,0,0,0
+Monaco,2021,0,0,0
 Mongolia,2005,0.8,9.2,0
 Mongolia,2010,0.8,9.1,0
 Mongolia,2021,0.9,9.1,0
@@ -346,9 +346,9 @@ Mozambique,2021,7.2,46.4,0.4
 Namibia,2005,1,9.4,0
 Namibia,2010,1,8.9,0
 Namibia,2021,1,8,0
-Nauru,2005,,0,20
-Nauru,2010,,0,20
-Nauru,2021,,0,20
+Nauru,2005,0,0,20
+Nauru,2010,0,0,20
+Nauru,2021,0,0,20
 Nepal,2005,15.9,41,0.9
 Nepal,2010,15.2,41.6,1.1
 Nepal,2021,14.7,41.6,1.5
@@ -509,9 +509,9 @@ Tunisia,2021,18.2,4.5,13.6
 Turkmenistan,2005,4.3,8.8,0.1
 Turkmenistan,2010,4.1,8.8,0.1
 Turkmenistan,2021,4.1,8.8,0.1
-Tuvalu,2005,,33.3,56.7
-Tuvalu,2010,,33.3,60
-Tuvalu,2021,,33.3,60
+Tuvalu,2005,0,33.3,56.7
+Tuvalu,2010,0,33.3,60
+Tuvalu,2021,0,33.3,60
 Turkey,2005,31,26.8,3.6
 Turkey,2010,27.8,27.4,3.9
 Turkey,2021,25.8,29.1,4.7
