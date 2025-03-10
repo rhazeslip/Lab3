@@ -38,12 +38,10 @@ public class Country {
     }
 
     public String toString() {
-        return "Country{" +
-                "countryName='" + countryName + '\'' +
-                ", year=" + year +
-                ", arableLandPercentage=" + ArableLandPercentage +
-                ", forestPercentage=" + ForestPercentage +
-                ", cropPercentage=" + CropPercentage +
-                '}';
+        return  "Name: " + countryName +
+                ", Year: " + year +
+                ", Arable Land Percentage: " + ArableLandPercentage +
+                ", Forests Percentage: " + ForestPercentage +
+                ", Crop Percentage: " + CropPercentage;
     }
 }
