@@ -1,3 +1,4 @@
+/*
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -6,10 +7,10 @@ import javax.swing.*;
 import java.util.List;
 
 public class ChartsPanel extends JPanel{
-    public ChartsPanel(List<Employee> employees) {
+    public ChartsPanel(List<Country> countries) {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-        for (Employee emp : employees) {
-            dataset.addValue(emp.getSalary(), "Salary", emp.getName());
+        for (Country con : countries) {
+            dataset.addValue(con.getForestPercentage(), "Forest Percentage: ", con.getCountryName());
         }
 
         JFreeChart chart = ChartFactory.createBarChart(
@@ -18,3 +19,5 @@ public class ChartsPanel extends JPanel{
         add(new ChartsPanel(chart));
     }
 }
+
+ */

@@ -6,15 +6,19 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class DataProcessing {
-    public static List<Employee> readEmployees(String filePath) throws IOException {
+    public static List<Country> readCountry(String filePath) throws IOException {
         try (Stream<String> lines = Files.lines(Paths.get(filePath))) {
-            return lines.skip(1).map(line -> {
-                String[] parts = line.split(",");
-                return new Employee(
-                        Integer.parseInt(parts[0]),parts[1],
-                        Interger.parseInt(parts[2]),Double.parseDouble(parts[3]),parts[4]
-                );
-            }).collect(collectors.toList());
+            return lines.skip(1)
+                    .map(line -> {
+                        String[] parts = line.split(",");
+                        return new Country(
+                            parts[0], //Country Name
+                            Integer.parseInt(parts[1]), //year
+                            Double.parseDouble(parts[2]), //Arable land percentage
+                            Double.parseDouble(parts[3]), //Forest percentage
+                            Double.parseDouble(parts[4])  //crop percentage
+                    );
+            }).collect(Collectors.toList());
         }
     }
 }

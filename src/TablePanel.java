@@ -6,19 +6,21 @@ public class TablePanel extends JPanel{
     private JTable table;
     private DefaultTableModel model;
 
-    public TablePanel(List<Employee> employees){
+    public TablePanel(List<Country> countries){
         model = new DefaultTableModel();
-        model.addColumn("ID");
-        model.addColumn("Name");
-        model.addColumn("Age");
-        model.addColumn("Salary");
-        model.addColumn("Department");
+        model.addColumn("Country");
+        model.addColumn("Year");
+        model.addColumn("Arable land %");
+        model.addColumn("Forests %");
+        model.addColumn("Crops %");
 
-        for (Employee emp : employees) {
+        for (Country con : countries) {
             model.addRow(new Object[]{
-                emp.getID(), emp.getName(), emp.getAge(), emp.getSalary(), emp.getDepartment()
+                con.getCountryName(), con.getYear(), con.getArableLandPercentage(), con.getForestPercentage(),
+                    con.getCropPercentage()
             });
         }
+
         table = new JTable(model);
         table.setAutoCreateRowSorter(true);
         add(new JScrollPane(table));
