@@ -15,9 +15,9 @@ public class DataProcessing {
                 try {
                     String countryName = parts[0];
                     int year = Integer.parseInt(parts[1].trim());
-                    double arableLandPercentage = Integer.parseInt(parts[2].trim());
-                    double forestPercentage = Integer.parseInt(parts[3].trim());
-                    double cropPercentage = Integer.parseInt(parts[4].trim());
+                    double arableLandPercentage = Double.parseDouble(parts[2].trim());
+                    double forestPercentage = Double.parseDouble(parts[3].trim());
+                    double cropPercentage = Double.parseDouble(parts[4].trim());
 
                     countries.add(new Country(countryName, year, arableLandPercentage, forestPercentage,
                                     cropPercentage));
