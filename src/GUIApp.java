@@ -5,16 +5,18 @@ import java.util.List;
 
 public class GUIApp extends JFrame {
     public GUIApp(List<Country> countries) {
-        setTitle("Country Data Visualization");
+        setTitle("Country Data Visualization"); //Title of the GUI
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
+        //Creates panels for all the different panels
         TablePanel tablePanel = new TablePanel(countries);
         DetailsPanel detailsPanel = new DetailsPanel();
         StatsPanel statsPanel = new StatsPanel(countries);
         //ChartsPanel chartsPanel = new ChartsPanel(countries);
 
+        //Add listener to the table to update the details panel when a row is selected
         tablePanel.getTable().getSelectionModel().addListSelectionListener(e -> {
             int selectedRow = tablePanel.getTable().getSelectedRow();
             if (selectedRow >= 0) {
@@ -29,6 +31,7 @@ public class GUIApp extends JFrame {
         //add(chartsPanel, BorderLayout.WEST);
     }
 
+    //Reads the file and launches the GUI
     public static void main(String[] args) {
         try {
             List<Country> countries = DataProcessing.readCountry("final_filtered_countries_cleaned.csv");

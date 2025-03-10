@@ -1,5 +1,3 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Country {
     private String countryName;
     private int year;
@@ -17,6 +15,7 @@ public class Country {
         this.CropPercentage = CropPercentage;
     }
 
+    //Getters for the objects items
     public String getCountryName() {
         return countryName;
     }
@@ -37,6 +36,7 @@ public class Country {
         return CropPercentage;
     }
 
+    //Output when the string of an object is called.
     public String toString() {
         return  "Name: " + countryName +
                 ", Year: " + year +
