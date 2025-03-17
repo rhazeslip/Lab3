@@ -12,7 +12,7 @@ public class ChartsPanel extends JPanel{
             dataset.addValue(con.getForestPercentage(), "Forest Percentage: ", con.getCountryName());
         }
 
-        JFreeChart
+        //JFreeChart
     }
 }
 
