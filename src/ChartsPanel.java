@@ -1,4 +1,3 @@
-/*
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -13,11 +12,8 @@ public class ChartsPanel extends JPanel{
             dataset.addValue(con.getForestPercentage(), "Forest Percentage: ", con.getCountryName());
         }
 
-        JFreeChart chart = ChartFactory.createBarChart(
-                "Employee Salaries", "Employee", "Salary", dataset
-        );
-        add(new ChartsPanel(chart));
+        JFreeChart
     }
 }
 
- */
+
