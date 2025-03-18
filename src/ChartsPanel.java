@@ -1,16 +1,16 @@
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.data.category.DefaultPieDataset;
+import org.jfree.data.general.DefaultPieDataset;
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
 
 public class ChartsPanel extends JPanel{
-    private org.jfree.data.general.DefaultPieDataset dataset;
+    private DefaultPieDataset dataset;
     private JFreeChart pieChart;
 
-    public ChartsPanel(List<Country> countries) {
+    public ChartsPanel() {
         setLayout (new BorderLayout());
 
         dataset = new DefaultPieDataset();
