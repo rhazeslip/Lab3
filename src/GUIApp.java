@@ -14,14 +14,15 @@ public class GUIApp extends JFrame {
         TablePanel tablePanel = new TablePanel(countries);
         DetailsPanel detailsPanel = new DetailsPanel();
         StatsPanel statsPanel = new StatsPanel(countries);
-        //ChartsPanel chartsPanel = new ChartsPanel(countries);
+        ChartsPanel chartsPanel = new ChartsPanel(countries);
 
         //Add listener to the table to update the details panel when a row is selected
         tablePanel.getTable().getSelectionModel().addListSelectionListener(e -> {
             int selectedRow = tablePanel.getTable().getSelectedRow();
             if (selectedRow >= 0) {
-                Country con = countries.get(selectedRow);
-                detailsPanel.setDetails(con.toString());
+                Country selectedCountry = countries.get(selectedRow);
+                detailsPanel.setDetails(selectedCountry.toString());
+                chartsPanel.updateChart(selectedCountry.toString());
             }
         });
 
