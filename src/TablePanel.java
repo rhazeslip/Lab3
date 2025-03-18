@@ -16,10 +16,10 @@ public class TablePanel extends JPanel{
         model.addColumn("Crops %");
 
         //Adds the information to each row for each object
-        for (Country con : countries) {
+        for (Country country : countries) {
             model.addRow(new Object[]{
-                con.getCountryName(), con.getYear(), con.getArableLandPercentage(), con.getForestPercentage(),
-                    con.getCropPercentage()
+                country.getCountryName(), country.getYear(), country.getArableLandPercentage(), country.getForestPercentage(),
+                    country.getCropPercentage()
             });
         }
 

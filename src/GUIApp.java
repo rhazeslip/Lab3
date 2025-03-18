@@ -14,21 +14,25 @@ public class GUIApp extends JFrame {
         TablePanel tablePanel = new TablePanel(countries);
         DetailsPanel detailsPanel = new DetailsPanel();
         StatsPanel statsPanel = new StatsPanel(countries);
-        //ChartsPanel chartsPanel = new ChartsPanel(countries);
+        ChartsPanel chartsPanel = new ChartsPanel(countries);
 
         //Add listener to the table to update the details panel when a row is selected
         tablePanel.getTable().getSelectionModel().addListSelectionListener(e -> {
             int selectedRow = tablePanel.getTable().getSelectedRow();
             if (selectedRow >= 0) {
-                Country con = countries.get(selectedRow);
-                detailsPanel.setDetails(con.toString());
+                Country selectedCountry = countries.get(selectedRow);
+                detailsPanel.setDetails(selectedCountry.toString());
+                chartsPanel.updateChart(selectedCountry);
             }
         });
+        JPanel southPanel = new JPanel();
+        southPanel.add(statsPanel);
+        southPanel.add(detailsPanel);
+        southPanel.setLayout(new BoxLayout(southPanel, BoxLayout.Y_AXIS));
 
         add(tablePanel, BorderLayout.CENTER);
-        add(detailsPanel, BorderLayout.SOUTH);
-        add(statsPanel, BorderLayout.EAST);
-        //add(chartsPanel, BorderLayout.WEST);
+        add(southPanel, BorderLayout.SOUTH);
+        add(chartsPanel, BorderLayout.EAST);
     }
 
     //Reads the file and launches the GUI
