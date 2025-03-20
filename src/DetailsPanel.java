@@ -13,6 +13,11 @@ public class DetailsPanel extends JPanel {
 
     //Sets the details in the text area
     public void setDetails(String details) {
-        detailsArea.setText(details);
+        if (details != null) {
+            detailsArea.setText(details);
+        }
+        else {
+            detailsArea.setText("No Data Available");
+        }
     }
 }

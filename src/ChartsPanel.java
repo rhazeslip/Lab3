@@ -14,22 +14,39 @@ public class ChartsPanel extends JPanel{
         setLayout (new BorderLayout());
 
         dataset = new DefaultPieDataset();
-        pieChart = ChartFactory.createPieChart("Land Usage Distribution", dataset, true,
+        //Creates the initial blank chart with title
+        pieChart = ChartFactory.createPieChart("No Entry Selected", dataset, true,
                 true, false);
 
+        //sets the size of chart and adds it
         ChartPanel chartPanel = new ChartPanel(pieChart);
         chartPanel.setPreferredSize(new Dimension(300, 150));
         add(chartPanel, BorderLayout.CENTER);
     }
 
+    //Method to update chart after entry selected
     public void updateChart(Country country) {
 
+        if (country != null) {
+            //grabs data for the country
+            double arable = country.getArableLandPercentage();
+            double forest = country.getForestPercentage();
+            double crops = country.getCropPercentage();
+            double unmarked = 100 - (arable + forest + crops);
 
-        dataset.setValue("Arable Land", country.getArableLandPercentage());
-        dataset.setValue("Forest", country.getForestPercentage());
-        dataset.setValue("Crops", country.getCropPercentage());
+            //Updates values in chart
+            dataset.setValue("Arable Land %", arable);
+            dataset.setValue("Forest %", forest);
+            dataset.setValue("Crops %", crops);
+            dataset.setValue("Unmarked %", unmarked);
 
-        pieChart.setTitle("Forest Percentage Over Time for " + country.getCountryName() + " " + country.getYear());
+            //Updates title
+            pieChart.setTitle("Land Usage Distribution for " + country.getCountryName() + " " + country.getYear());
+        }
+
+        else {
+            pieChart.setTitle("No Entry Selected");
+        }
     }
 }
 

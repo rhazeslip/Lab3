@@ -14,7 +14,7 @@ public class ConsoleApp {
                 System.out.println("Tenth (10th) Country: " + countries.get(9));
             }
 
-            System.out.println("Total Countries " + (countries.size()/3));
+            System.out.println("Total Countries: " + (countries.size()/3));
 
             System.out.println("Total Entries: " + countries.size());
 
